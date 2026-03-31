@@ -1,0 +1,60 @@
+/* Footer Styles - Using Tailwind */
+footer {
+  @apply bg-dark-card border-t border-border-color py-16 px-[5vw];
+}
+
+.footer-grid {
+  @apply grid grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-12;
+}
+
+.footer-brand {
+  @apply font-cinzel text-xl tracking-widest text-gold mb-4;
+}
+
+.footer-tagline {
+  @apply text-sm text-text-muted leading-relaxed max-w-xs;
+}
+
+.footer-heading {
+  @apply text-xs tracking-widest uppercase text-gold mb-5;
+}
+
+.footer-links {
+  @apply list-none flex flex-col gap-3;
+}
+
+.footer-links a {
+  @apply no-underline text-text-muted text-xs transition-colors duration-300 hover:text-text-light;
+}
+
+.footer-bottom {
+  @apply border-t border-border-color pt-6 flex justify-between items-center flex-wrap gap-4;
+}
+
+.footer-copy {
+  @apply text-xs text-text-muted tracking-wider;
+}
+
+.footer-legal {
+  @apply flex gap-6;
+}
+
+.footer-legal a {
+  @apply text-xs text-text-muted no-underline tracking-wider transition-colors duration-300 hover:text-gold;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    @apply grid-cols-2;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    @apply grid-cols-1;
+  }
+
+  .footer-bottom {
+    @apply flex-col text-center;
+  }
+}

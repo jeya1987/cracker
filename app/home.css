@@ -1,0 +1,29 @@
+/* Home Page Styles */
+.marquee-wrap {
+  @apply bg-gold py-2.5 overflow-hidden;
+}
+
+.marquee {
+  @apply flex gap-12 animate-marquee whitespace-nowrap;
+}
+
+.marquee span {
+  @apply text-xs tracking-widest uppercase text-dark-bg font-semibold;
+}
+
+.marquee span::before {
+  @apply content-['✦'] mr-6;
+}
+
+.stats {
+  @apply bg-dark-card border-t border-b border-border-color py-12 px-[5vw] grid gap-8 text-center;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.stat-num {
+  @apply font-cinzel text-2xl text-gold block;
+}
+
+.stat-label {
+  @apply text-xs tracking-widest uppercase text-text-muted mt-1;
+}

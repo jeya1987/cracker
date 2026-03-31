@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-dark-bg text-text-light font-jost font-light overflow-x-hidden;
+  }
+
+  button {
+    @apply font-jost cursor-pointer transition-all duration-300;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply font-jost text-text-light;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-dark rounded-sm;
+  }
+}
+
+@layer components {
+  .scrollable::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  .scrollable::-webkit-scrollbar-track {
+    @apply bg-white/5;
+  }
+
+  .scrollable::-webkit-scrollbar-thumb {
+    @apply bg-gold-dark rounded;
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-gold text-dark-bg px-9 py-3.5 font-jost text-sm font-medium tracking-widest uppercase border-none transition-all duration-300 hover:bg-gold-light hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-gold px-9 py-3.5 font-jost text-sm font-normal tracking-widest uppercase border border-gold-dark transition-all duration-300 hover:border-gold hover:bg-gold/5;
+  }
+
+  .btn-text {
+    @apply bg-transparent border-none text-gold p-2.5 transition-all duration-300;
+  }
+
+  .btn-full {
+    @apply w-full mb-3 !important;
+  }
+}

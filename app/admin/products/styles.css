@@ -1,0 +1,357 @@
+/* Products Management Page */
+
+
+
+/* Columns Panel */
+.columns-panel {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  background: rgba(201, 168, 76, 0.02);
+}
+
+.columns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.column-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.column-checkbox:hover {
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.column-checkbox input {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold);
+}
+
+.column-checkbox span {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* Products Table */
+.products-table {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--dark);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.products-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table thead {
+  background: var(--card);
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.products-table th {
+  padding: 1rem;
+  text-align: left;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.products-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.products-table tbody tr:hover {
+  background: rgba(201, 168, 76, 0.04);
+}
+
+/* Product Cell */
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-cell .emoji {
+  font-size: 1.5rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.product-name {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.product-desc {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+/* Price Cell */
+.price-cell {
+  font-family: 'Cinzel', serif;
+}
+
+.price-cell .current-price {
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
+.price-cell .original {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-top: 0.2rem;
+}
+
+/* Category Badge */
+.badge-cat {
+  background: rgba(201, 168, 76, 0.1);
+  color: var(--gold);
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  border: 1px solid var(--gold-dark);
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* Price Cell */
+.price-cell {
+  font-family: 'Cinzel', serif;
+}
+
+.price-cell .current-price {
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
+.price-cell .original {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-top: 0.2rem;
+}
+
+/* Stock Badge */
+.stock {
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  display: inline-block;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.stock.in-stock {
+  background: rgba(29, 185, 84, 0.15);
+  color: #4dff4d;
+  border-color: #4dff4d;
+}
+
+.stock.low-stock {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.stock.out-of-stock {
+  background: rgba(204, 42, 42, 0.15);
+  color: var(--red);
+  border-color: var(--red);
+}
+
+/* Badge Type */
+.badge-type {
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid;
+}
+
+.badge-type.sale {
+  background: rgba(204, 42, 42, 0.15);
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.badge-type.new {
+  background: rgba(29, 185, 84, 0.15);
+  color: #4dff4d;
+  border-color: #4dff4d;
+}
+
+.badge-type.bestseller {
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-edit {
+  background: var(--gold);
+  color: var(--black);
+  border: 1px solid var(--gold);
+}
+
+.btn-edit:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+}
+
+.btn-delete {
+  background: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+.btn-delete:hover {
+  background: rgba(204, 42, 42, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-edit {
+  background: var(--gold);
+  color: var(--black);
+  border: 1px solid var(--gold);
+}
+
+.btn-edit:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+}
+
+.btn-delete {
+  background: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+.btn-delete:hover {
+  background: rgba(204, 42, 42, 0.1);
+  transform: translateY(-2px);
+}
+
+
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .products-table {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filter-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-group-row {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-table table {
+    min-width: 800px;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .search-input {
+    min-width: 100%;
+  }
+
+  .filter-toggle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .filter-panel,
+  .columns-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-content {
+    margin: 1rem;
+    max-width: 90vw;
+  }
+}

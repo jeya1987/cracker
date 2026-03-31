@@ -1,0 +1,52 @@
+/* Hero Styles - Using Tailwind */
+.hero {
+  @apply min-h-screen flex items-center justify-center relative overflow-hidden px-[5vw] mt-[70px];
+}
+
+.hero-bg {
+  @apply absolute inset-0;
+  background: radial-gradient(ellipse at 60% 50%, #2a1800 0%, #0e0a00 40%, #08080a 70%);
+}
+
+.hero-content {
+  @apply relative z-10 max-w-[650px];
+}
+
+.hero-tag {
+  @apply text-xs tracking-widest uppercase text-gold mb-6;
+}
+
+h1 {
+  @apply font-cinzel text-[clamp(2.8rem,7vw,5.5rem)] font-bold leading-none tracking-wide mb-4;
+}
+
+h1 em {
+  @apply font-cormorant italic text-gold text-[1.15em] font-light;
+}
+
+.hero-sub {
+  @apply text-base text-text-muted leading-relaxed mb-10 max-w-[420px] font-light;
+}
+
+.hero-btns {
+  @apply flex gap-4 flex-wrap;
+}
+
+.hero-scroll {
+  @apply absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted text-xs tracking-widest uppercase;
+}
+
+.scroll-line {
+  @apply w-px h-[50px] animate-scrollPulse;
+  background: linear-gradient(to bottom, #8a6a1e, transparent);
+}
+
+@media (max-width: 600px) {
+  .hero-btns {
+    @apply flex-col;
+  }
+
+  .btn-primary, .btn-secondary {
+    @apply text-center;
+  }
+}

@@ -1,0 +1,38 @@
+/* Navigation Styles - Using Tailwind */
+.navbar {
+  @apply fixed top-0 left-0 right-0 z-[100] px-[5vw] h-[70px] flex items-center justify-between border-b border-border-color/20 backdrop-blur-[20px] bg-dark-bg/85;
+}
+
+.nav-logo {
+  @apply font-cinzel text-xl tracking-widest text-gold no-underline;
+}
+
+.nav-logo span {
+  @apply text-text-light text-xs block tracking-widest font-jost font-light -mt-1;
+}
+
+.nav-links {
+  @apply flex gap-10 list-none;
+}
+
+.nav-links a {
+  @apply no-underline text-text-muted text-xs tracking-wide uppercase transition-colors duration-300 hover:text-gold;
+}
+
+.nav-right {
+  @apply flex items-center gap-6;
+}
+
+.cart-btn {
+  @apply bg-transparent border border-gold-dark text-gold px-5 py-2 font-jost text-xs tracking-wider uppercase transition-all duration-300 relative hover:bg-gold hover:text-dark-bg;
+}
+
+.cart-badge {
+  @apply absolute -top-2 -right-2 bg-gold text-dark-bg w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold tracking-normal normal-case shadow-[0_2px_8px_rgba(201,168,76,0.4)] animate-badgePulse;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    @apply hidden;
+  }
+}

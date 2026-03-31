@@ -1,0 +1,73 @@
+/* Testimonials Styles - Tailwind Version */
+
+.testimonials {
+  @apply bg-dark-card py-[clamp(3rem,6vw,6rem)] px-[5vw];
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    @apply py-12 px-[3vw];
+  }
+}
+
+.testimonials-grid {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6;
+}
+
+@media (max-width: 480px) {
+  .testimonials-grid {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .testimonial {
+    @apply p-4;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .testimonials-grid {
+    @apply grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5;
+  }
+
+  .testimonial {
+    @apply p-6;
+  }
+}
+
+@media (min-width: 769px) {
+  .testimonials-grid {
+    @apply grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6;
+  }
+
+  .testimonial {
+    @apply p-8;
+  }
+}
+
+.testimonial {
+  @apply bg-dark-input border border-border-color p-8 relative;
+}
+
+.testimonial::before {
+  @apply absolute top-[-8px] left-6 text-8xl text-gold-dark leading-none opacity-40;
+  content: '"';
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.testimonial-text {
+  @apply font-cormorant italic text-lg leading-relaxed text-text-light mb-6 pt-6;
+}
+
+@media (max-width: 480px) {
+  .testimonial-text {
+    @apply text-base leading-relaxed mb-4 pt-4;
+  }
+}
+
+.testimonial-author {
+  @apply text-xs tracking-widest uppercase text-gold;
+}
+
+.stars {
+  @apply text-gold text-xs mb-2 tracking-wider;
+}

@@ -1,0 +1,78 @@
+/* Custom Toast Container - Tailwind Version */  
+
+.custom-toast-container {
+  @apply fixed bottom-8 right-8 flex flex-col gap-4 z-[9999] pointer-events-none;
+}
+
+@media (max-width: 768px) {
+  .custom-toast-container {
+    @apply bottom-4 right-4 left-4;
+  }
+}
+
+.custom-toast {
+  @apply pointer-events-auto bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] border border-gold rounded-lg py-4 px-5 shadow-lg font-jost text-white text-base flex justify-between items-center gap-4 min-h-[60px] animate-slideInToast max-w-md;
+}
+
+@media (max-width: 480px) {
+  .custom-toast {
+    @apply text-sm px-4 py-3 min-h-[50px];
+  }
+}
+
+.custom-toast-success {
+  @apply border-gold;
+}
+
+.custom-toast-success::before {
+  @apply content-['✓'] text-gold font-bold text-xl mr-2 flex-shrink-0;
+}
+
+.custom-toast-error {
+  @apply border-[#ff4444];
+}
+
+.custom-toast-error::before {
+  @apply content-['✕'] text-[#ff4444] font-bold text-xl mr-2 flex-shrink-0;
+}
+
+.custom-toast-info {
+  @apply border-[#4488ff];
+}
+
+.custom-toast-info::before {
+  @apply content-['ℹ'] text-[#4488ff] font-bold text-xl mr-2 flex-shrink-0;
+}
+
+.toast-close {
+  @apply cursor-pointer text-2xl text-text-muted transition-colors duration-200 ml-auto flex-shrink-0 px-2 hover:text-gold;
+}
+
+.custom-toast-error .toast-close:hover {
+  @apply text-[#ff4444];
+}
+
+.custom-toast-info .toast-close:hover {
+  @apply text-[#4488ff];
+}
+
+/* Cart notification content */
+.cart-notification {
+  @apply flex items-center gap-3 flex-1;
+}
+
+.cart-notification-emoji {
+  @apply text-2xl flex-shrink-0;
+}
+
+.cart-notification-text {
+  @apply flex flex-col;
+}
+
+.cart-notification-title {
+  @apply font-semibold text-gold mb-1;
+}
+
+.cart-notification-count {
+  @apply text-sm text-zinc-300;
+}
